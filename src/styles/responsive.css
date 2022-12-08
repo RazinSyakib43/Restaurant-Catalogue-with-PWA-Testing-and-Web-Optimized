@@ -1,0 +1,236 @@
+.posts {
+  display: grid;
+  grid-row-gap: 16px;
+}
+
+@media screen and (max-width: 235px) {
+  .header h1{
+    display: none !important;
+  }
+  
+  .header h1 {
+    font-size: 12px;
+    margin: 10px;
+    display: block;
+    width: 30px;
+  }
+}
+
+@media screen and (max-width: 861px) {
+  .nav {
+    z-index: 10;
+    background-color: #fff;
+    width: 300px;
+    position: absolute;
+    flex-direction: column;
+
+    /* This trasform moves the drawer off canvas. */
+    -webkit-transform: translate(-300px, 0);
+    transform: translate(-300px, 0);
+
+    /* Optionally, we animate the drawer. */
+    transition: transform 0.3s ease;
+  }
+
+  .open {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+  .nav__item {
+    display: list-item;
+    border-bottom: 1px solid #E0E0E0;
+    width: 100%;
+    text-align: left;
+  }
+
+  .nav{
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav h1{
+    display: none;
+  }
+
+  .header{
+    display: flex;
+    align-items: center;
+  }
+  .header__menu {
+    font-size: 32px;
+    display: block;
+    width: 30px;
+    padding: 44px;
+  }
+
+  .header h1{
+    color: #24616d;
+    font-size: 30px;
+    margin-left: 10px;
+    display: block;
+  }
+  
+  .header span{
+    color: #569009;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .hero{
+    background-image: url("../../dist/images/hero-large.jpg");
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .hero{
+    background-image: url("../../dist/images/hero-small.jpg");
+  }
+}
+
+@media screen and (min-width: 455px) {
+  .headline__content {
+    padding: 16px 16px;
+  }
+
+  .headline__title {
+    font-size: 28px;
+  }
+
+  .headline__description {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 860px) {
+  .header__menu {
+    display: none;
+  }
+  
+  .header h1{
+    display: none;
+  }
+  .restaurants {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hero {
+    min-height: 420px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .app-bar {
+    grid-template-columns: 1fr auto;
+    padding: 8px 32px;
+  }
+ 
+  .app-bar .app-bar__brand h1 {
+    font-size: 1.5em;
+  }
+ 
+  .app-bar .app-bar__menu {
+    display: none;
+  }
+ 
+  .app-bar .app-bar__navigation {
+    position: static;
+    width: 100%;
+  }
+ 
+  .app-bar .app-bar__navigation ul li {
+    display: inline-block;
+  }
+ 
+  .app-bar .app-bar__navigation ul li a {
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    margin: 0;
+    padding: 20px 10px;
+  }
+  .headline__content {
+    margin: 0 auto;
+    max-width: 650px;
+  }
+
+  .post-item__content {
+    padding: 16px 32px 32px 32px;
+  }
+
+  .post-item__title {
+    font-size: 18px;
+  }
+
+  .post-item__description {
+    font-size: 14px;
+  }
+  .restaurants {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .restaurant {
+    grid-template-columns: auto 1fr;
+  }
+
+  .restaurant .restaurant__name {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .restaurant .restaurant__description {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 16px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .nav__list {
+    max-width: 800px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .headline {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .headline__content {
+    padding: 16px 32px;
+  }
+
+  .posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  main {
+    max-width: 1200px;
+  }
+
+  .hero{
+    min-width: 1000px;
+  }
+
+  .restaurants {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .hero{
+    width: 100%;
+  }
+}
